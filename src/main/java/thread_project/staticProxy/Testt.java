@@ -1,4 +1,4 @@
-package staticProxy;
+package thread_project.staticProxy;
 
 import java.util.HashSet;
 import java.util.Set;

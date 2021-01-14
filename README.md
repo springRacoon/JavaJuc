@@ -41,3 +41,35 @@
 
 ## 可重入锁ReentrantLock
 > 可以自己控制，注意规范注意加锁解锁。 
+
+---
+## 并发问题的产生
+> 多个线程同时操作同一个资源类
+> 
+> synchronized的本质是队列，锁
+> 
+> new ReentrantLock() -> lock.lock(); -> finally {lock.unlock();}
+
+## 公平锁和非公平锁
+> 公平锁不能插队
+> 非公平锁可以插队（cpu）判断
+
+## synchronized和lock的区别
+> synchronized 是内置关键字；lock 是一个类
+> 
+> synchronized 无法判断锁的状态；lock 可以判断是否获取到了锁
+> 
+> synchronized 回自动释放锁；lock 必须手动释放锁，如果不释放，会死锁
+> 
+> synchronized 线程1获得锁，线程2会等待；lock 锁不一定会等待（lock.tryLock()）
+> 
+> synchronized 可重入锁，不可以中断，非公平；lock 可重入锁，可以判断锁，非公平（可设置）
+> 
+> synchronized 适合少量的代码同步部分问题；lock 适合大量的代码同步问题
+
+
+## 虚假唤醒
+> 线程也可以唤醒，而不会被通知，就是所谓的虚假唤醒，虽然很少发生，但是应该注意。应该在判断等待时使用while而不是if
+
+## Condition的优势
+> 精准的通知和唤醒线程

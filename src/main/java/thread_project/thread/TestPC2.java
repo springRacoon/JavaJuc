@@ -1,4 +1,4 @@
-package thread;
+package thread_project.thread;
 
 /**
  * @program: Juc

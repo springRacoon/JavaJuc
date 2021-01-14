@@ -1,4 +1,4 @@
-package syn;
+package thread_project.syn;
 
 /**
  * @program: Juc

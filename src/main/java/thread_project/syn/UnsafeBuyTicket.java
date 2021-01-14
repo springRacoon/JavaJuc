@@ -1,6 +1,4 @@
-package syn;
-
-import java.util.concurrent.TimeUnit;
+package thread_project.syn;
 
 /**
  * @program: Juc

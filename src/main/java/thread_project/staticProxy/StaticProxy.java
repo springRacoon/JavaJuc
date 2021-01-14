@@ -1,4 +1,4 @@
-package staticProxy;
+package thread_project.staticProxy;
 
 /**
  * @program: Juc
