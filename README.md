@@ -122,3 +122,10 @@
 > 3.new CopyOnWriteArraySet<>();
 > 
 > PS:HashSet的底层是HashMap
+
+## HashMap
+> HashMap 线程不安全,解决方法：
+> 
+> 1.Collections.synchronizedMap(new HashMap<>())
+> 
+> 2.new ConcurrentHashMap();
