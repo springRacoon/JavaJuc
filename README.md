@@ -73,3 +73,11 @@
 
 ## Condition的优势
 > 精准的通知和唤醒线程
+
+
+## synchronized
+> synchronized锁的对象是方法的调用者
+> 
+> static 静态方法 类一加载就有了 锁的是Class
+>
+> 主要看锁的是谁，用的是不是一把锁
