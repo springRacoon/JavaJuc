@@ -58,7 +58,6 @@ public class B {
         }, "D").start();
 
 
-
     }
 
 }
@@ -70,7 +69,7 @@ class Data2 {
     Lock lock = new ReentrantLock();
     Condition condition = lock.newCondition();
 
-    public  void increment() throws InterruptedException {
+    public void increment() throws InterruptedException {
         lock.lock();
         try {
             while (number != 0) {
@@ -79,14 +78,14 @@ class Data2 {
             number++;
             System.out.println(Thread.currentThread().getName() + "=>" + number);
             condition.signalAll();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }
 
-    public  void decrement() throws InterruptedException {
+    public void decrement() throws InterruptedException {
         lock.lock();
         try {
             while (number == 0) {
@@ -95,9 +94,9 @@ class Data2 {
             number--;
             System.out.println(Thread.currentThread().getName() + "=>" + number);
             condition.signalAll();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

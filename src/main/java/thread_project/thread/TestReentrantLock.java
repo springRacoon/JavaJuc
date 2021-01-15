@@ -21,7 +21,7 @@ public class TestReentrantLock {
 }
 
 
-class TestReentrantLock2 implements Runnable{
+class TestReentrantLock2 implements Runnable {
     int ticketNums = 10;
 
     private final ReentrantLock lock = new ReentrantLock();
@@ -29,21 +29,20 @@ class TestReentrantLock2 implements Runnable{
 
     @Override
     public void run() {
-        while (true){
-            try{
+        while (true) {
+            try {
                 lock.lock();
-                if(ticketNums >0){
+                if (ticketNums > 0) {
                     try {
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     System.out.println(ticketNums--);
-                }else{
+                } else {
                     break;
                 }
-            }
-            finally {
+            } finally {
                 lock.unlock();
             }
 

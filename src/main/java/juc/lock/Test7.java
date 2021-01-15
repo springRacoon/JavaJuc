@@ -43,7 +43,7 @@ class Phone7 {
         System.out.println("发短信");
     }
 
-    public  synchronized void call() {
+    public synchronized void call() {
         System.out.println("打电话");
     }
 

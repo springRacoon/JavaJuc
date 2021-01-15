@@ -7,7 +7,7 @@ package thread_project.staticProxy;
  * @author: Saxon
  * @create: 2021-01-07 15:02
  */
-public class WorkHelper implements Work{
+public class WorkHelper implements Work {
 
     //代理真实目标
     private Work work;

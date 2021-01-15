@@ -105,14 +105,15 @@
 > 1.Vector
 >
 > 2.Collections.synchronizedList(new ArrayList<>());
-> 
+>
 > 3.new CopyOnWriteArrayList<>();(写入时复制， COW 计算机程序设计领域的一种优化策略。多线程调用时，读取的时候是固定的，写入可能会覆盖。避免写入时覆盖，造成数据问题)
-> 
+>
 > PS:Vector比CopyOnWriteArrayList出在哪里
-> 
+>
 > Vector使用了synchronized，效率低\
 
 ## HashSet
+
 > HashSet 线程不安全,解决方法：
 >
 > 1.Vector
@@ -120,12 +121,13 @@
 > 2.Collections.synchronizedSet(new HashSet<>());
 >
 > 3.new CopyOnWriteArraySet<>();
-> 
+>
 > PS:HashSet的底层是HashMap
 
 ## HashMap
+
 > HashMap 线程不安全,解决方法：
-> 
+>
 > 1.Collections.synchronizedMap(new HashMap<>())
-> 
+>
 > 2.new ConcurrentHashMap();

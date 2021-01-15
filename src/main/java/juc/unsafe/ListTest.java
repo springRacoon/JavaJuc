@@ -1,6 +1,7 @@
 package juc.unsafe;
 
-import java.util.*;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**

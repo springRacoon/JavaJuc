@@ -6,7 +6,7 @@ package thread_project.staticProxy;
  * @author: Saxon
  * @create: 2021-01-07 15:01
  */
-public class Worker implements Work{
+public class Worker implements Work {
     @Override
     public void doWork() {
         System.out.println("doing work");

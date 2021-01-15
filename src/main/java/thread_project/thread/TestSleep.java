@@ -30,9 +30,9 @@ public class TestSleep implements Runnable {
     public static void main(String[] args) {
         TestSleep testSleep = new TestSleep();
 
-        new Thread(testSleep,"小明").start();
-        new Thread(testSleep,"小张").start();
-        new Thread(testSleep,"小杨").start();
+        new Thread(testSleep, "小明").start();
+        new Thread(testSleep, "小张").start();
+        new Thread(testSleep, "小杨").start();
 
     }
 }

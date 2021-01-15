@@ -42,18 +42,17 @@ class Data3 {
     private Condition condition1 = lock.newCondition();
     private Condition condition2 = lock.newCondition();
     private Condition condition3 = lock.newCondition();
-    private int  number = 1;
-
+    private int number = 1;
 
 
     public void printA() {
         lock.lock();
         try {
-            while (number!=1){
+            while (number != 1) {
                 condition1.await();
             }
-            System.out.println(Thread.currentThread().getName()+"AAAA");
-            number =2;
+            System.out.println(Thread.currentThread().getName() + "AAAA");
+            number = 2;
             condition2.signal();
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,11 +65,11 @@ class Data3 {
     public void printB() {
         lock.lock();
         try {
-            while (number!=2){
+            while (number != 2) {
                 condition2.await();
             }
-            System.out.println(Thread.currentThread().getName()+"BBBB");
-            number =3;
+            System.out.println(Thread.currentThread().getName() + "BBBB");
+            number = 3;
             condition3.signal();
         } catch (Exception e) {
             e.printStackTrace();
@@ -82,11 +81,11 @@ class Data3 {
     public void printC() {
         lock.lock();
         try {
-            while (number!=3){
+            while (number != 3) {
                 condition3.await();
             }
-            System.out.println(Thread.currentThread().getName()+"CCCC");
-            number =1;
+            System.out.println(Thread.currentThread().getName() + "CCCC");
+            number = 1;
             condition1.signal();
         } catch (Exception e) {
             e.printStackTrace();

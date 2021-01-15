@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
  * @author: Saxon
  * @create: 2021-01-12 15:36
  */
-public class TestPool{
+public class TestPool {
 
     public static void main(String[] args) {
         ExecutorService service = Executors.newFixedThreadPool(10);
@@ -24,7 +24,7 @@ public class TestPool{
 
 }
 
-class MyThread implements Runnable{
+class MyThread implements Runnable {
     @Override
     public void run() {
 

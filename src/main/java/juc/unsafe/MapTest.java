@@ -1,9 +1,7 @@
 package juc.unsafe;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @program: Juc

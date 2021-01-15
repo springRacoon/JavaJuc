@@ -2,7 +2,7 @@ package thread_project.syn;
 
 /**
  * @program: Juc
- * @description: 不安全买票,会有负数
+ * @description: 不安全买票, 会有负数
  * @author: Saxon
  * @create: 2021-01-11 15:31
  */
@@ -12,9 +12,9 @@ public class UnsafeBuyTicket {
 
         BuyTicket buyTicket = new BuyTicket();
 
-        new Thread(buyTicket,"one").start();
-        new Thread(buyTicket,"two").start();
-        new Thread(buyTicket,"three").start();
+        new Thread(buyTicket, "one").start();
+        new Thread(buyTicket, "two").start();
+        new Thread(buyTicket, "three").start();
 
     }
 }

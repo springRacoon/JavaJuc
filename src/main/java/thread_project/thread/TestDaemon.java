@@ -21,18 +21,18 @@ public class TestDaemon {
 
 }
 
-class Foo implements  Runnable{
+class Foo implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             System.out.println("foo");
         }
     }
 }
 
 
-class Bar implements Runnable{
+class Bar implements Runnable {
 
     @Override
     public void run() {

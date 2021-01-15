@@ -15,17 +15,20 @@ public class SaleTicketDemo02 {
 
         Ticket2 ticket = new Ticket2();
 
-        new Thread(() -> { for (int i = 0; i < 60; i++) {
-            ticket.sale();
-        }
+        new Thread(() -> {
+            for (int i = 0; i < 60; i++) {
+                ticket.sale();
+            }
         }, "A").start();
-        new Thread(() -> { for (int i = 0; i < 60; i++) {
-            ticket.sale();
-        }
+        new Thread(() -> {
+            for (int i = 0; i < 60; i++) {
+                ticket.sale();
+            }
         }, "B").start();
-        new Thread(() -> { for (int i = 0; i < 60; i++) {
-            ticket.sale();
-        }
+        new Thread(() -> {
+            for (int i = 0; i < 60; i++) {
+                ticket.sale();
+            }
         }, "C").start();
     }
 
@@ -44,9 +47,9 @@ class Ticket2 {
                 System.out.println(Thread.currentThread().getName() + "卖出了第" + number-- + "张票,剩余" + number);
             }
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

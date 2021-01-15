@@ -10,8 +10,8 @@ public class TestYield {
     public static void main(String[] args) {
 
         MyYield myYield = new MyYield();
-        new Thread(myYield,"a ").start();
-        new Thread(myYield,"b ").start();
+        new Thread(myYield, "a ").start();
+        new Thread(myYield, "b ").start();
     }
 
 }

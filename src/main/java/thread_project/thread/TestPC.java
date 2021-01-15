@@ -26,7 +26,7 @@ class Productor extends Thread {
     }
 
     @Override
-    public  void run() {
+    public void run() {
         for (int i = 0; i < 100; i++) {
             container.push(new Goods(i));
             System.out.println("生产" + i + "个商品");
@@ -43,7 +43,7 @@ class Consumer extends Thread {
     }
 
     @Override
-    public  void run() {
+    public void run() {
         for (int i = 0; i < 100; i++) {
             System.out.println("消费" + container.pop().id + "个商品");
         }
