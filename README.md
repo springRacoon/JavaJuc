@@ -131,3 +131,13 @@
 > 1.Collections.synchronizedMap(new HashMap<>())
 >
 > 2.new ConcurrentHashMap();
+
+
+#callalbe
+>  MyThread myThread = new MyThread();
+> 
+> FutureTask<Integer> integerFutureTask = new FutureTask<>(myThread);
+> 
+> new Thread(integerFutureTask,"A").start();
+> 
+> 可以获取结束后的值
