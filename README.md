@@ -132,31 +132,49 @@
 >
 > 2.new ConcurrentHashMap();
 
+# callalbe
 
-#callalbe
->  MyThread myThread = new MyThread();
-> 
+> MyThread myThread = new MyThread();
+>
 > FutureTask<Integer> integerFutureTask = new FutureTask<>(myThread);
-> 
+>
 > new Thread(integerFutureTask,"A").start();
-> 
+>
 > 可以获取结束后的值
 
-
 ## CountDownLatchDemo
+
 > 计数器，可以等待归零后再操作，每次countDown()-1，变为0后，唤醒计数器，await被唤醒，继续执行
 
 ## CyclicBarrier
+
 > 加法计数器 线程相互等待，当所有线程都到达某个屏障点后再进行后续的操作。
 
 ## Semaphore
+
 > 可以用来控制同时访问特定资源的线程数量，通过协调各个线程，以保证合理地使用资源
 > semaphore.acquire() 获得，假设已经满了，等待，等待被释放为止
 > semaphore.release() 释放，会将当前信号量释放+1，然后唤醒等待的线程
 
 ## ReadWriteLock
+
 > 读可以多个线程读取，写只能一个一个线程写
-> 
+>
 > 读和读可以共存，读和写、写和写不能共存
-> 
-> （独占锁，共享锁）：独占锁（写锁），一次只能被一个线程占有，共享锁（读锁），多个线程可以同时占有 
+>
+> （独占锁，共享锁）：独占锁（写锁），一次只能被一个线程占有，共享锁（读锁），多个线程可以同时占有
+
+## BlockingQueue
+
+> 什么情况下使用？：多线程并发处理，线程池
+
+|  方式   | 抛出异常 | 有返回值  | 阻塞 等待  | 超时等待  |
+|  :----:  | :----:     | :----: | :----:  | :----: |
+| 添加    |   add()  |   offer()   |   put()    |   put()  |
+| 移除    |   remove()  |   poll()  |   take()   |  take() |
+| 判断队首尾 |   element()  |   peek()  |   -   |  -  |
+
+
+## SynchronousQueue
+> 阻塞队列，只能写入一个，拿出后才能再写入
+
