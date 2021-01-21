@@ -229,3 +229,25 @@
 > DiscardPolicy 不会抛出异常，不会处理
 > 
 > DiscardOldestPolicy 抛弃队列里最老的，代替他的位置进入队列 不会抛出异常
+
+
+## 最大线程数如何定义
+>1.CPU密集型 几核CPU就定义为几，可以保证CPU效率最高 
+> 
+> Runtime.getRuntime().availableProcessors()
+> 
+>2.IO密集型  可以设置为判断你的程序中最消耗IO的线程数
+
+
+##函数式接口
+>只有一个方法的接口
+> 
+>四大函数式接口：Consumer,Function,Predicate,Supplier
+> 
+> 1.Function 一个输入参数，一个输出参数 
+> 
+> 2.Predicate 一个输入参数，返回值只能是boolean 
+> 
+> 3.Consumer 只有输入 没有返回值
+> 
+> 4.Supplier 只有返回值 没有输入
