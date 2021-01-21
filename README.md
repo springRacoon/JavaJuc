@@ -204,5 +204,28 @@
         //创建一个固定的线程池的大小（可自动调节）
         Executors.newCachedThreadPool();
 ```
+> *七大参数
+> 
+> 1.corePoolSize 核心线程池大小
+> 
+> 2.maximumPoolSize 最大核心线程池大小
+> 
+> 3.keepAliveTime 超时没有人调用就会释放
+> 
+> 4.unit 超时单位
+> 
+> 5.workQueue 阻塞队列
+> 
+> 6.threadFactory 线程工厂，用来创建线程
+> 
+> 7.handle 拒绝策略
 
-
+>*四种拒绝策略
+> 
+> AbortPolicy 不处理，抛出异常
+> 
+> CallerRunsPolicy 哪个线程来的，哪个线程执行
+> 
+> DiscardPolicy 不会抛出异常，不会处理
+> 
+> DiscardOldestPolicy 抛弃队列里最老的，代替他的位置进入队列 不会抛出异常
