@@ -251,3 +251,11 @@
 > 3.Consumer 只有输入 没有返回值
 > 
 > 4.Supplier 只有返回值 没有输入
+
+
+## 异步回调
+> CompletableFuture<T>
+> 
+> supplyAsync （有返回值）
+> 
+> runAsync （无返回值）
